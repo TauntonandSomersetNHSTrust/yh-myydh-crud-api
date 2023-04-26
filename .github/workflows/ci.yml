@@ -158,7 +158,7 @@ jobs:
               run: npm run db:migrate
 
             - name: Coveralls parallel
-              if: github.repository == 'Fdawgs/yh-myydh-crud-api'
+              if: github.repository == 'TauntonandSomersetNHSTrust/yh-myydh-crud-api'
               uses: coverallsapp/github-action@v2.1.2
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -224,7 +224,7 @@ jobs:
         needs: unit-tests
         if: >
             github.event.pull_request.draft == false &&
-            github.repository == 'Fdawgs/yh-myydh-crud-api'
+            github.repository == 'TauntonandSomersetNHSTrust/yh-myydh-crud-api'
         runs-on: ubuntu-latest
         steps:
             - name: Coveralls finished
